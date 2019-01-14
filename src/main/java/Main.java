@@ -135,7 +135,7 @@ public class Main {
 
     public static void printCityFromPerson(String person_id) {
         if (person_ids.containsKey(person_id)) {
-            System.out.println(person_ids.get(person_id));
+//            System.out.println(person_ids.get(person_id));
             for (String person : person_ids.get(person_id)) {
                 System.out.println(person);
             }
