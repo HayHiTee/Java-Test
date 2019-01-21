@@ -24,6 +24,7 @@ D Rhonda Hopkins ; BARCELONA ; 54315871-Z
 D Taylor Matthews ; LISBOA ; 58202263-G
 
 **Commands Supported**
+
 1. java -jar application.jar {FILE} CITY {CITY_NAME} 
 → Will print the list of names and ID's belonging to people that have been in that city
 
@@ -33,6 +34,7 @@ D Taylor Matthews ; LISBOA ; 58202263-G
 Note: Commands are case-insensitive
 
 **Output examples**
+
 java -jar application.jar input.txt CITY CARTAGENA must output an unordered unrepeated list of people and IDs that have been to CARTAGENA.
 Mitchell Newton,25384390A
 Rhonda Hopkins,54315871Z
@@ -43,17 +45,21 @@ java -jar application.jar ID 54808168L must output an unordered unrepeated list 
 MADRID
 BARCELONA
 OVIEDO
-Getting Started
+
+**Getting Started**
+
 These instructions will get you a copy of the project up
 and running on your local machine for development and testing purposes.
 
 **Prerequisites**
+
 You need to have JDK 1.8 or higher installed on your system.
 You need to set your system variables(If you would be using your terminal) 
 Check online on how to set JAVA_HOME and Path variable for your OS. To set Maven system variable check here
 A robust IDE for development(IntelliJ or netbeans)[optional].
 
 **Usage**
+
 Clone or download this repository.
 cd to project folder
 Download dependencies with your IDE or in the terminal using
@@ -70,9 +76,11 @@ You can also run the unit tests with your IDE or in the terminal with the comman
 mvn test
 
 **Built With**
+
 Maven - Dependency Management
 
 **Author**
+
 Iyanuoluwa Temitope Akintilebo
 
 
