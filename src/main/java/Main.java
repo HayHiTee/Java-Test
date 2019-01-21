@@ -17,6 +17,8 @@ public class Main {
     /**
      * @param args the command line arguments
      */
+
+//    Declaration of all the static Variables
     private static final String OPERATION_FIND_CITY = "CITY";
     private static final String OPERATION_FIND_ID = "ID";
 
@@ -26,13 +28,29 @@ public class Main {
     public static final String FIRST_FORMAT_SPLIT_STRING = ",";
     public static final String SECOND_FORMAT_SPLIT_STRING = " ; ";
 
+//    HashMap to store cities of a person Id. Id is key and the cities
+//    the Id has been too are stored in array list
     private static final HashMap<String, ArrayList<String>> cities = new HashMap<String, ArrayList<String>>();
 
+
+//    HashMap to store the person Ids and names of people that visited the city,
+//    Name of the city is key and the Ids and name details are stored in array list
     private static final HashMap<String, ArrayList<String>> person_ids = new HashMap<String, ArrayList<String>>();
 
+
+//    The main method that interacts with the command line arguments and calls the file input method
+
+//     if the operation is to find city, direct to readInput and
+//     Hashmap of that city name and print people details in it
+
+//     if the operation is to find Id, direct to readInput and
+//     the Hashmap of that Id and print cities in it
+
+//      if not then an invalid command
     public static void main(String[] args) {
         String filename = args[0];
         String operationType = args[1];
+
         if (operationType.equals(OPERATION_FIND_CITY)) {
             String cityName = args[2];
             readInput(filename, operationType);
@@ -50,6 +68,7 @@ public class Main {
         }
     }
 
+//    The read input method takes the filename and the type of query - Either find city or id
     public static void readInput(String filename, String query_type) {
         // TODO code application logic here
 
@@ -92,6 +111,8 @@ public class Main {
 
     }
 
+//    The format input method allows us to format input file line according to the format in the
+//    file, there are two formats, F1 or F2
     public static String[] formatInput(char format, String line) {
         line = line.substring(2);
         String splitString;
@@ -106,6 +127,7 @@ public class Main {
 
     }
 
+//    this method prints the people of a particular city name
     public static void printPeopleFromCity(String city_name) {
         if (cities.containsKey(city_name)) {
 //            ArrayList<String> results = cities.get(city_id);
@@ -118,6 +140,8 @@ public class Main {
         }
     }
 
+
+//    This method add unique people details(filter by IDs) to the city
     public static void addToCity(String[] userData) {
         ArrayList<String> persons = new ArrayList<String>();
         String city_name = userData[1];
@@ -133,6 +157,7 @@ public class Main {
 
     }
 
+    //    this method prints the cities that a person has been too(using the person Id)
     public static void printCityFromPerson(String person_id) {
         if (person_ids.containsKey(person_id)) {
 //            System.out.println(person_ids.get(person_id));
@@ -143,6 +168,7 @@ public class Main {
 
     }
 
+    //    this method adds the unique city name that a particular person has been to using the person Id as key
     public static void addToPerson(String[] userData) {
         ArrayList<String> cities = new ArrayList<String>();
         String person_id = userData[2];
